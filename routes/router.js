@@ -60,12 +60,12 @@ app.post('/login', (req, res, next) => {
       if (err) {
         throw err;
         return res.status(400).send({
-          msg: 'email does not exist'
+          msg: 'email does not exist!'
         });
       }
       if (!result.length) {
         return res.status(401).send({
-          msg: 'email is incorrect!'
+          msg: 'email does not exist!'
         });
       }
       // check password
